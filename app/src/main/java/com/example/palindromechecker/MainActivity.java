@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i("Palindrome", "The Palindrom button was clicked");
-                String s = String.valueOf(textQuestion.getText());
+                String s = String.valueOf(textQuestion.getText()).toLowerCase();
                 if (!s.isEmpty()) {
                     isPalindrome = s.equals(new StringBuilder(s).reverse().toString());
                     if (isPalindrome == true) {
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                         textResult.setText("This is a plaindrome");
 
                     } else {
-                        textResult.setText("This is not a  plaindrome");
+                        textResult.setText("This is not a plaindrome");
 
                     }
                 } else {
